@@ -1,6 +1,7 @@
 package reusableScenarios;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -11,8 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class InvokeBrowser {
 	
-	public WebDriver driver;	
-
+	public WebDriver driver;
+	
 	public WebDriver invokeDriver() throws IOException
 	{
 		Properties prop = new Properties();
@@ -43,6 +44,30 @@ public class InvokeBrowser {
 			}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
-	}	
-	
+	}
+
+	public WebDriver driverInstance() throws IOException
+	{
+		Properties prop = new Properties();
+		FileInputStream fis= new FileInputStream("C:\\GitHubRepository\\.git\\SeleniumFrameWork\\src\\main\\java\\resources\\DataPool.properties");
+		prop.load(fis);
+		
+		String Browser=prop.getProperty("browser");
+		
+		if (Browser.equals("chrome"))
+		{
+			driver = new ChromeDriver();
+						
+		}
+			else if (Browser.equals("Firefox"))
+			{
+				driver = new FirefoxDriver();
+			
+			}
+        return driver;
+
+    }	
+		
 }
+
+	

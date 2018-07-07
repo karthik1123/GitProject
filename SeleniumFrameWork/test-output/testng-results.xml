@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43523" started-at="2018-07-06T12:03:35Z" finished-at="2018-07-06T12:04:18Z">
+  <suite name="Default suite" duration-ms="44384" started-at="2018-07-07T08:41:40Z" finished-at="2018-07-07T08:42:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43523" started-at="2018-07-06T12:03:35Z" finished-at="2018-07-06T12:04:18Z">
+    <test name="Default test" duration-ms="44384" started-at="2018-07-07T08:41:40Z" finished-at="2018-07-07T08:42:24Z">
       <class name="GitHubProject.InvokeApplicationTest">
-        <test-method status="FAIL" signature="OpenApplication()[pri:0, instance:GitHubProject.InvokeApplicationTest@77caeb3e]" name="OpenApplication" duration-ms="43459" started-at="2018-07-06T12:03:35Z" finished-at="2018-07-06T12:04:18Z">
+        <test-method status="FAIL" signature="OpenApplication()[pri:0, instance:GitHubProject.InvokeApplicationTest@77caeb3e]" name="OpenApplication" duration-ms="44200" started-at="2018-07-07T08:41:40Z" finished-at="2018-07-07T08:42:24Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at resources.Components.LoginUsrId(Components.java:20)
-at reusableScenarios.LoginFunction.LoginAction(LoginFunction.java:28)
-at GitHubProject.InvokeApplicationTest.OpenApplication(InvokeApplicationTest.java:20)
+at resources.Components.LoginUsrId(Components.java:21)
+at reusableScenarios.LoginFunction.LoginAction(LoginFunction.java:27)
+at GitHubProject.InvokeApplicationTest.OpenApplication(InvokeApplicationTest.java:18)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
