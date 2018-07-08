@@ -8,6 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
 
 public class Data4Excel {
 			 
@@ -19,15 +20,16 @@ public class Data4Excel {
 
 		private static XSSFRow Row;
 
-	public static Object[][] getTableArray(String FilePath, String SheetName) throws Exception {   
+@Test
+		public static Object[][] getTableArray(String FilePath, String SheetName) throws Exception {   
 
 	   String[][] tabArray = null;
 
 	   try {
-		   FileInputStream ExcelFile = new FileInputStream(FilePath);
+		   FileInputStream ExcelFile = new FileInputStream("C:\\GitHubRepository\\.git\\SeleniumFrameWork\\src\\main\\java\\resources\\Data4Excel.xls");
 		   // Access the required test data sheet
 		   ExcelWBook = new XSSFWorkbook(ExcelFile);
-		   ExcelWSheet = ExcelWBook.getSheet(SheetName);
+		   ExcelWSheet = ExcelWBook.getSheet("Data4Excel");
 
 		   int startRow = 1;
 		   int startCol = 1;
@@ -45,26 +47,18 @@ public class Data4Excel {
 					}
 				}
 			}
-		catch (FileNotFoundException e){
+	   
+		catch (FileNotFoundException e)
+	   {
 			System.out.println("Could not read the Excel sheet");
-			e.printStackTrace();
-			}
-		catch (IOException e){
+				}
+	   
+		catch (IOException e)
+	   {
 			System.out.println("Could not read the Excel sheet");
-			e.printStackTrace();
-			}
-		return(tabArray);
+		}
+	return tabArray;
+		
 	}
-}
 
-	public static String getCellData(int RowNum, int ColNum) throws Exception {
-		try{
-			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-
-			int dataType = Cell.getCellType();
-
-			if  (dataType == 3) {
-
-				return "";
-			}
-
+}	

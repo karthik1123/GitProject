@@ -4,23 +4,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
-
 import resources.Components;
 
 public class LoginFunction extends InvokeBrowser{
 
-	public static WebDriver driver;
-	
 public void LoginAction() throws IOException
 {
 	
 	Properties prop = new Properties();
 	FileInputStream fis= new FileInputStream("C:\\GitHubRepository\\.git\\SeleniumFrameWork\\src\\main\\java\\resources\\DataPool.properties");
 	prop.load(fis);
-
-	LoginFunction OpenBrowser = new LoginFunction();
-	OpenBrowser.invokeDriver();
 	
 	Components Cmp= new Components(driver);
 	//Cmp.LoginUsrId().sendKeys("karthik.agileqa@gmail.com");

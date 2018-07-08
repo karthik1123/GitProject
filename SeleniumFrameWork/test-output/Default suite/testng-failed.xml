@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GitHubProject.InvokeApplicationTest">
+      <class name="GitHubProject.LoingandLogoutApplicationTest">
         <methods>
-          <include name="OpenApplication"/>
+          <include name="LogoutApplication"/>
         </methods>
-      </class> <!-- GitHubProject.InvokeApplicationTest -->
+      </class> <!-- GitHubProject.LoingandLogoutApplicationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
