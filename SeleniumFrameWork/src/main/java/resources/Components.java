@@ -7,14 +7,12 @@ import reusableScenarios.InvokeBrowser;
 
 public class Components extends InvokeBrowser{
 	
-	By LoginUsrnme= By.xpath("//input[@id='email']");
-	By LoginPsw= By.xpath("//input[@id='pass']");
-	By Submit= By.xpath("//input[@type='submit']");
-	By Accountsettings = By.xpath("//div[@id='userNavigationLabel']");
-	By Logout = By.xpath("//span[contains(text(), 'Log Out')]");
-	
-	//div[contains(text(), "Account Settings")]
-	
+	  By usrname = By.xpath("//*[@id='login1']");
+	  By psw = By.xpath("//*[@id='password']");
+	  By go = By.xpath("//input[@name='proceed']");
+	  By logout = By.xpath("/html/body/div[4]/div[1]/div/div[2]/a[2]");
+			  
+	 
 	public Components(WebDriver driver) 
 	{
 		this.driver = driver;
@@ -22,23 +20,20 @@ public class Components extends InvokeBrowser{
 	
 	public WebElement LoginUsrId()
 	{
-		return driver.findElement(LoginUsrnme);
+		return driver.findElement(usrname);
 	}
 	public WebElement LoginPswd()
 	{
-		return driver.findElement(LoginPsw);
+		return driver.findElement(psw);
 	}
 	public WebElement SubmitButton()
 	{
-		return driver.findElement(Submit);
+		return driver.findElement(go);
 	}
-	public WebElement Settings()
-	{
-		return driver.findElement(Accountsettings);
-	}
+	
 	public WebElement LogoutButton()
 	{
-		return driver.findElement(Logout);
+		return driver.findElement(logout);
 	}
 	
 	

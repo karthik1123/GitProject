@@ -3,17 +3,19 @@ package reusableScenarios;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+import org.openqa.selenium.WebDriver;
 import resources.Components;
 
-public class LoginFunction extends InvokeBrowser{
+public class LoginFunction extends Base{
 
-public void LoginAction() throws IOException
-{
-	
+	public WebDriver LoginAction() throws IOException
+	{
 	Properties prop = new Properties();
 	FileInputStream fis= new FileInputStream("C:\\GitHubRepository\\.git\\SeleniumFrameWork\\src\\main\\java\\resources\\DataPool.properties");
 	prop.load(fis);
+	String URL=prop.getProperty("url");
+	driver.get(URL);	
+	driver.manage().window().maximize();
 	
 	Components Cmp= new Components(driver);
 	//Cmp.LoginUsrId().sendKeys("karthik.agileqa@gmail.com");
@@ -22,6 +24,7 @@ public void LoginAction() throws IOException
     Cmp.LoginPswd().sendKeys(prop.getProperty("pswd"));
 	Cmp.SubmitButton().click();	
 	System.out.println(driver.getTitle());
-
-}
+	return driver;
+	
+	}
 }

@@ -6,6 +6,7 @@
       <class name="GitHubProject.LoingandLogoutApplicationTest">
         <methods>
           <include name="LogoutApplication"/>
+          <include name="OpenApplication"/>
         </methods>
       </class> <!-- GitHubProject.LoingandLogoutApplicationTest -->
     </classes>

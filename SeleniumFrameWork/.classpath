@@ -6,6 +6,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="Results">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -37,5 +42,9 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/eclipse/plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/eclipse/plugins/org.testng_6.14.2.r201802161450.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/eclipse/plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/apache-log4j-2.11.0-bin/log4j-api-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/apache-log4j-2.11.0-bin/log4j-core-2.11.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

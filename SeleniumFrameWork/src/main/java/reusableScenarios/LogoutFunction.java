@@ -1,14 +1,17 @@
 package reusableScenarios;
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
+
 import resources.Components;
 
-public class LogoutFunction extends InvokeBrowser{
+public class LogoutFunction extends Base{
 
-	public void LogoutAction() throws IOException
+	public WebDriver LogoutAction() throws IOException
 	{
 		Components Cmp= new Components(driver);
-		Cmp.Settings().click();
+		//Cmp.Settings().click();
 		Cmp.LogoutButton().click();
+		return driver;
 	}
 }
